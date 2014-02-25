@@ -6,12 +6,12 @@
 	while ($i<=$wordcount) {
 		$word = $srcRef[$i];
 		$wlen = strlen($word);
-		$lPad = floor($wlen/2)+1;
-		$rPad = ceil($wlen/2)-1;
-		$lWord = substr($word, 0, -$lPad);
-		$rWord = substr($word, -$rPad, 0);
-		$floWord = $lWord.$rWord;
-		echo str_pad($word, 23, " ", STR_PAD_BOTH)."\r";
+		$lPad = floor($wlen/2);
+		$left = substr($word, 0, $lPad);
+		$middle = substr($word, $lPad, 1);
+		$right = substr($word, $lPad + 1);
+		$floWord = $left . '<font color="#B40431">'.$middle.'</font>'.$right."\r";
+		echo str_pad($floWord, 24, " ", STR_PAD_BOTH)."\r";
 		$i++;
 		usleep(200000);
 	}
