@@ -1,0 +1,31 @@
+Spritz 'OPR' Algorithm:
+
+X  |  Y
+-------
+1  | 1
+2  | 2
+3  | 2
+4  | 2
+5  | 2
+6  | 3
+7  | 3
+8  | 3
+9  | 3
+10 | 4
+11 | 4
+12 | 4
+13 | 4
+14 | 4
+15 | 4
+16 | 5
+17 | 5
+18 | 5
+19 | 5
+20 | 5
+21 | 5
+22 | 5
+
+X = lenth of word
+Y = place of word centering
+
+Very few English words are longer than 22 letters, but I am sure you can see the pattern.
