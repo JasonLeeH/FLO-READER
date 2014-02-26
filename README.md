@@ -1,4 +1,4 @@
-#flö
+#Flö
 
 Read at 300WPM and Faster! (Open-Source Version of Spritz)
 
