@@ -8,7 +8,9 @@ Read at 300WPM and Faster! (Open-Source Version of Spritz)
 
 Ensure all files are in the same directory and then run:
 
-    php market_data.php
+    php flo.php
+    
+The text will immediately begin cycling.
 
 ##Required
 PHP ≥ 4.01 
