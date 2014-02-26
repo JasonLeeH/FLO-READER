@@ -14,6 +14,6 @@
 		$floWord = "  ".$left.ColorCLI::light_red($middle, null, 'null').$right;
 		echo str_pad($floWord, 34, " ", STR_PAD_BOTH)."\r";
 		$i++;
-		usleep(200000);
+		usleep(120000);
 	}
 ?>
