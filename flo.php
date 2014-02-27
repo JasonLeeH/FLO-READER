@@ -7,23 +7,59 @@
 	while ($i<=$wordcount) {
 		$word = $srcRef[$i];
 		$wlen = strlen($word);
-		if ($wlen = 4) {
-			$wlen = strlen($word);
-			$lPad = floor($wlen/2)+1;
-			$rPad = ceil($wlen/2);
-			$left = substr($word, 0, -$lPad);
-			$middle = substr($word, -$lPad, 1); 
-			$right = substr($word, $rPad, $lPad);
-			$floWord = "   ".$left.ColorCLI::light_red($middle, null, 'null').$right;
-		} else {
-		$lPad = floor($wlen/2);
-		$left = substr($word, 0, $lPad);
-		$middle = substr($word, $lPad, 1);
-		$right = substr($word, $lPad + 1);
-		$floWord = "  ".$left.ColorCLI::light_red($middle, null, 'null').$right;
+		if ($wlen == 1) {
+			include('./func/1.php');
 		}
-		echo str_pad($floWord, 34, " ", STR_PAD_BOTH)."\r";
+		else if ($wlen == 2) {
+			include('./func/two.php');
+		}
+		else if ($wlen == 3) {
+			include('./func/three.php');
+		}
+		else if ($wlen == 4) {
+			include('./func/four.php');
+		}
+		else if ($wlen == 5) {
+			include('./func/five.php');
+		}
+		else if ($wlen == 6) {
+			include('./func/six.php');
+		}
+		else if ($wlen == 7) {
+			include('./func/seven.php');
+		}
+		else if ($wlen == 8) {
+			include('./func/eight.php');
+		}
+		else if ($wlen == 9) {
+			include('./func/nine.php');
+		}
+		else if ($wlen == 10) {
+			include('./func/ten.php');
+		}
+		else if ($wlen == 11) {
+			include('./func/eleven.php');
+		}
+		else if ($wlen == 12) {
+			include('./func/twelve.php');
+		}
+		else if ($wlen == 13) {
+			include('./func/thirteen.php');
+		}
+		else if ($wlen == 14) {
+			include('./func/fourteen.php');
+		}
+		else if ($wlen == 15) {
+			include('./func/fifteen.php');
+		}
+		else if ($wlen == 16) {
+			include('./func/sixteen.php');
+		}
+		echo str_pad('-----------|------------------', 33, " ", STR_PAD_BOTH)."\n";
+		echo str_pad($floWord, 33, " ", STR_PAD_BOTH)."\n";
+		echo str_pad('-----------|------------------', 33, " ", STR_PAD_BOTH)."\n";
+		echo "\n\r";
 		$i++;
-		usleep(120000);
+		usleep(200000);
 	}
 ?>
