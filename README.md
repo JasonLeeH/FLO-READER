@@ -2,6 +2,8 @@
 
 Read at 300WPM and Faster! (Open-Source Version of Spritz)
 
+![alt tag](http://i.imgur.com/JLq03Ci.png)
+
 
 ##Usage
 *Currently CLI-only!*
