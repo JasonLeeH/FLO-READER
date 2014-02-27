@@ -1,6 +1,6 @@
 <?php
 	include('cli_color.php');
-	$src = file_get_contents('Alice.txt');
+	$src = file_get_contents('TheWarOfTheWorlds.txt');
 	$srcRef = preg_split("/[\s -]+/", $src);
 	$wordcount = count($srcRef);
 	$i=0;
