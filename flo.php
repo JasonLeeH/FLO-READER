@@ -1,7 +1,7 @@
 <?php
 	include('cli_color.php');
 	$src = file_get_contents('Alice.txt');
-	$srcRef = preg_split("/[\s]+/", $src);
+	$srcRef = preg_split("/[\s -]+/", $src);
 	$wordcount = count($srcRef);
 	$i=0;
 	while ($i<=$wordcount) {
@@ -54,6 +54,9 @@
 		}
 		else if ($wlen == 16) {
 			include('./func/sixteen.php');
+		}
+		else if ($wlen == 17) {
+			include('./func/seventeen.php');
 		}
 		echo str_pad('-----------|------------------', 33, " ", STR_PAD_BOTH)."\n";
 		echo str_pad($floWord, 33, " ", STR_PAD_BOTH)."\n";
