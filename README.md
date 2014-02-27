@@ -15,4 +15,5 @@ Ensure all files are in the same directory and then run:
 The text will immediately begin cycling.
 
 ##Required
-PHP ≥ 4.01 
+* PHP ≥ 4.01
+* Fixed-Width Font
