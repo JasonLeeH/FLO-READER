@@ -2,7 +2,7 @@
 
 Read at 300WPM and Faster! (Open-Source Version of Spritz)
 
-![alt tag](http://i.imgur.com/4UUTTxR.png)
+![alt tag](http://i.imgur.com/4gpRj7l.png)
 
 
 ##Usage
