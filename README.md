@@ -16,4 +16,4 @@ The text will immediately begin cycling.
 
 ##Required
 * PHP ≥ 4.01
-* [Fixed-Width Font](https://pcaro.es/p/hermit/)
+* [Fixed-Width Font](http://www.fontsquirrel.com/fonts/droid-sans-mono)
