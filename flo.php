@@ -1,7 +1,7 @@
 <?php
 	include('cli_color.php');
-	$src = file_get_contents('TheWarOfTheWorlds.txt');
-	$srcRef = preg_split("/[\s -]+/", $src);
+	$src = file_get_contents('Alice.txt');
+	$srcRef = preg_split('/[\s]/', $src, 0, PREG_SPLIT_NO_EMPTY);
 	$wordcount = count($srcRef);
 	$i=0;
 	while ($i<=$wordcount) {
@@ -58,11 +58,28 @@
 		else if ($wlen == 17) {
 			include('./func/seventeen.php');
 		}
-		echo str_pad('-----------|------------------', 33, " ", STR_PAD_BOTH)."\n";
-		echo str_pad($floWord, 33, " ", STR_PAD_BOTH)."\n";
-		echo str_pad('-----------|------------------', 33, " ", STR_PAD_BOTH)."\n";
-		echo "\n\r";
+		$pd = strpos($word, '.');
+		$qn = strpos($word, '?');
+		$en = strpos($word, '!');
+		$cn = strpos($word, ';');
+		if (($pd !== false) || ($qn !== false) || ($en !== false) || ($cn !== false)) {
+			echo str_pad('-----------|------------------', 33, " ", STR_PAD_BOTH)."\n";
+			echo str_pad($floWord, 33, " ", STR_PAD_BOTH)."\n";
+			echo str_pad('-----------|------------------', 33, " ", STR_PAD_BOTH)."\n";
+			echo "\n\r";
+			usleep(240000);
+			echo str_pad('-----------|------------------', 33, " ", STR_PAD_BOTH)."\n";
+			echo str_pad(' ', 33, " ", STR_PAD_BOTH)."\n";
+			echo str_pad('-----------|------------------', 33, " ", STR_PAD_BOTH)."\n";
+			echo "\n\r";
+			usleep(240000);
+		} else {
+			echo str_pad('-----------|------------------', 33, " ", STR_PAD_BOTH)."\n";
+			echo str_pad($floWord, 33, " ", STR_PAD_BOTH)."\n";
+			echo str_pad('-----------|------------------', 33, " ", STR_PAD_BOTH)."\n";
+			echo "\n\r";
+		}
 		$i++;
-		usleep(200000);
+		usleep(240000);
 	}
 ?>
