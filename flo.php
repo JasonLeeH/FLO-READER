@@ -1,9 +1,16 @@
 <?php
 	include('cli_color.php');
 	$src = file_get_contents('Alice.txt');
-	$srcRef = preg_split('/[\s]/', $src, 0, PREG_SPLIT_NO_EMPTY);
+	$srcRef = preg_split('/[\s]/', str_replace('-', ' -', $src), 0, PREG_SPLIT_NO_EMPTY);
 	$wordcount = count($srcRef);
 	$i=0;
+	$wpm250 = '240000';
+	$wpm300 = '200000';
+	$wpm350 = '171429';
+	$wpm400 = '150000';
+	$wpm450 = '133333';
+	$wpm500 = '120000';
+	$delay = $wpm400;
 	while ($i<=$wordcount) {
 		$word = $srcRef[$i];
 		$wlen = strlen($word);
@@ -60,19 +67,20 @@
 		}
 		$pd = strpos($word, '.');
 		$qn = strpos($word, '?');
-		$en = strpos($word, '!');
-		$cn = strpos($word, ';');
-		if (($pd !== false) || ($qn !== false) || ($en !== false) || ($cn !== false)) {
+		$em = strpos($word, '!');
+		$sc = strpos($word, ';');
+		$cn = strpos($word, ':');
+		if (($pd !== false) || ($qn !== false) || ($em !== false) || ($sc !== false) || ($cn !== false)) {
 			echo str_pad('-----------|------------------', 33, " ", STR_PAD_BOTH)."\n";
 			echo str_pad($floWord, 33, " ", STR_PAD_BOTH)."\n";
 			echo str_pad('-----------|------------------', 33, " ", STR_PAD_BOTH)."\n";
 			echo "\n\r";
-			usleep(240000);
+			usleep($delay);
 			echo str_pad('-----------|------------------', 33, " ", STR_PAD_BOTH)."\n";
 			echo str_pad(' ', 33, " ", STR_PAD_BOTH)."\n";
 			echo str_pad('-----------|------------------', 33, " ", STR_PAD_BOTH)."\n";
 			echo "\n\r";
-			usleep(240000);
+			usleep($delay);
 		} else {
 			echo str_pad('-----------|------------------', 33, " ", STR_PAD_BOTH)."\n";
 			echo str_pad($floWord, 33, " ", STR_PAD_BOTH)."\n";
@@ -80,6 +88,6 @@
 			echo "\n\r";
 		}
 		$i++;
-		usleep(240000);
+		usleep($delay);
 	}
 ?>
