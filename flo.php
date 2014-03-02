@@ -65,12 +65,13 @@
 		else if ($wlen == 17) {
 			include('./func/seventeen.php');
 		}
-		$pd = strpos($word, '.');
-		$qn = strpos($word, '?');
-		$em = strpos($word, '!');
-		$sc = strpos($word, ';');
-		$cn = strpos($word, ':');
-		if (($pd !== false) || ($qn !== false) || ($em !== false) || ($sc !== false) || ($cn !== false)) {
+		$period = strpos($word, '.');
+		$question = strpos($word, '?');
+		$exclame = strpos($word, '!');
+		$semi = strpos($word, ';');
+		$colon = strpos($word, ':');
+		$comma = strpos($word, ',');
+		if (($period !== false) || ($question !== false) || ($exclame !== false) || ($semi !== false) || ($colon !== false)) {
 			echo str_pad('-----------|------------------', 33, " ", STR_PAD_BOTH)."\n";
 			echo str_pad($floWord, 33, " ", STR_PAD_BOTH)."\n";
 			echo str_pad('-----------|------------------', 33, " ", STR_PAD_BOTH)."\n";
@@ -81,6 +82,12 @@
 			echo str_pad('-----------|------------------', 33, " ", STR_PAD_BOTH)."\n";
 			echo "\n\r";
 			usleep($delay);
+		} else if ($comma !== false) {
+			echo str_pad('-----------|------------------', 33, " ", STR_PAD_BOTH)."\n";
+			echo str_pad($floWord, 33, " ", STR_PAD_BOTH)."\n";
+			echo str_pad('-----------|------------------', 33, " ", STR_PAD_BOTH)."\n";
+			echo "\n\r";
+			usleep($delay+($delay/6));
 		} else {
 			echo str_pad('-----------|------------------', 33, " ", STR_PAD_BOTH)."\n";
 			echo str_pad($floWord, 33, " ", STR_PAD_BOTH)."\n";
