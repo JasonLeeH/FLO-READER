@@ -1,6 +1,6 @@
 <?php
 	include('cli_color.php');
-	$src = file_get_contents('Alice.txt');
+	$src = file_get_contents('./books/Alice.txt');
 	$srcRef = preg_split('/[\s]/', str_replace('-', ' -', $src), 0, PREG_SPLIT_NO_EMPTY);
 	$wordcount = count($srcRef);
 	$i=0;
@@ -10,7 +10,12 @@
 	$wpm400 = '150000';
 	$wpm450 = '133333';
 	$wpm500 = '120000';
-	$delay = $wpm400;
+	$wpm550 = '109091';
+	$wpm600 = '100000';
+	$wpm650 = '092308';
+	$wpm700 = '085714';
+	$wpm750 = '080000';
+	$delay = $wpm550;
 	while ($i<=$wordcount) {
 		$word = $srcRef[$i];
 		$wlen = strlen($word);
@@ -87,7 +92,7 @@
 			echo str_pad($floWord, 33, " ", STR_PAD_BOTH)."\n";
 			echo str_pad('-----------|------------------', 33, " ", STR_PAD_BOTH)."\n";
 			echo "\n\r";
-			usleep($delay+($delay/6));
+			usleep($delay+($delay/7));
 		} else {
 			echo str_pad('-----------|------------------', 33, " ", STR_PAD_BOTH)."\n";
 			echo str_pad($floWord, 33, " ", STR_PAD_BOTH)."\n";
