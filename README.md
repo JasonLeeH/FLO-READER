@@ -1,8 +1,8 @@
 #Flo Reader
 
-Read at 300WPM and Faster! (Open-Source Version of Spritz)
+Read up to 1000 words per minute, easily! (Open-Source Version of Spritz)
 
-![alt tag](http://i.imgur.com/4gpRj7l.png)
+![alt tag](http://i.imgur.com/51THUah.png)
 
 
 ##Usage
