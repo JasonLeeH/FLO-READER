@@ -1,4 +1,4 @@
-Spritz 'OPR' Algorithm:
+Spritz 'ORP' Algorithm:
 
 X  |  Y
 -------
