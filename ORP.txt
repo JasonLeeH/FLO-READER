@@ -26,6 +26,6 @@ X  |  Y
 22 | 5
 
 X = lenth of word
-Y = place of OPR
+Y = place of ORP
 
 Very few English words are longer than 22 letters, but I am sure you can see the pattern.
